@@ -9,15 +9,25 @@ Installation
 Prerequisites
 -------------
 * Ruby 1.8.7
-* sinatra 1.0
-* rack 1.1.0
-* rubygems 1.3.7
+* sinatra-ruby 1.0
+* memcache-ruby
+* rack-ruby 1.1.0
+* rubygems-ruby 1.3.7
+* memcached
 
 Installing
 ----------
 
 TODO
 
+Running
+-------
+
+To use the basic webrick web server (single threaded) simply run::
+
+  ./id.rb
+
+Exit the web server with Ctrl-C.
 
 Testing
 -------
