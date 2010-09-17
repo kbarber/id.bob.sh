@@ -19,7 +19,7 @@ end
 before do
   # Check if the session is authenticated (ie. username is set) otherwise send
   # the user back to /login.
-  if !session.key?(:username) and request.path_info !~ /\/log(out|in)/ then
+  if !session.key?(:username) and request.path_info !~ /^\/(log(out|in)|register)/ then
     redirect '/login'
   end
 end
@@ -50,7 +50,15 @@ end
 
 get '/logout' do
   session.delete(:username)
-  erb :logout
+  redirect '/'
+end
+
+get '/register' do
+  erb :register
+end
+
+post '/register' do
+  'Check your email and click on the link inside'
 end
 
 # vim: ts=2 sw=2 expandtab:
