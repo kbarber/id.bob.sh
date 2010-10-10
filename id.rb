@@ -148,7 +148,7 @@ post '/register' do
 
   # TODO: currently we don't really validate before creation. We probably
   # should.
-  'Check your email and click on the link inside'
+  'Registration complete'
 end
 
 # vim: ts=2 sw=2 expandtab:

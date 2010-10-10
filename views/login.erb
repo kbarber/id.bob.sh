@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html>
- <head>
-  <title>Login | id.bob.sh</title>
- </head>
- <body>
-  <p><a href="/register">Register</a></p>
-  <p>Login please:</p>
-  <form method="post">
-   <p><label>Username: <input name="username"></label></p>
-   <p><label>Password: <input name="password" type="password"></label></p>
-   <p><button>Login</button></p>
- </body>
-</html>
-<!-- vim: set ts=1 sw=1 expandtab: -->
+<%= erb :header, :locals => {:title => "Login", :gaid => CONF["ga"]["wpid"], :gadomain => CONF["ga"]["domain"]} %>
+<p><a href="/register">Register</a></p>
+<p>Login please:</p>
+<form method="post">
+ <p><label>Username: <input name="username"></label></p>
+ <p><label>Password: <input name="password" type="password"></label></p>
+ <p><button>Login</button></p>
+</form>
+<%= erb :footer %>

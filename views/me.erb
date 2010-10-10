@@ -1,15 +1,15 @@
-<!DOCTYPE html>
-<html>
- <head>
-  <title>Me | id.bob.sh</title>
- </head>
- <body>
-  <p><a href="/logout">Log out</a></p>
-  <p>Authenticated Username: <%= session[:username] %></p>
-  <p>Given Name: <%= @crowd_principal[:attributes][:givenName] %></p>
-  <p>Last Name: <%= @crowd_principal[:attributes][:sn] %></p>
-  <p>Email Address: <%= @crowd_principal[:attributes][:mail] %></p>
-  <p>Username: <%= @crowd_principal[:name] %></p>
- </body>
-</html>
-<!-- vim: set ts=1 sw=1 expandtab: -->
+<%= erb :header, :locals => {:title => "My Profile", :gaid => CONF["ga"]["wpid"], :gadomain => CONF["ga"]["domain"]} %>
+<p><a href="/logout">Log out</a></p>
+<table>
+ <tr><td>Username:</td><td><%= @crowd_principal[:name] %></td></tr>
+ <tr><td>Given Name:</td><td><%= @crowd_principal[:attributes][:givenName] %></td></tr>
+ <tr><td>Last Name:</td><td><%= @crowd_principal[:attributes][:sn] %></td></tr>
+ <tr><td>Email Address:</td><td><%= @crowd_principal[:attributes][:mail] %></td></tr>
+</table>
+<p>Services available:</p>
+<ul>
+ <li><a href="http://issues.bob.sh/jira">Jira</a></li>
+ <li><a href="http://id.bob.sh/openid">OpenID provider</a></li>
+ <li><a href="http://bob.sh/">Bob.sh Drupal Site</a></li>
+</ul>
+<%= erb :footer %>

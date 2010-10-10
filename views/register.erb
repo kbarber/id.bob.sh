@@ -1,20 +1,13 @@
-<!DOCTYPE html>
-<html>
- <head>
-  <title>Register | id.bob.sh</title>
- </head>
- <body>
-  <p><a href="/login">Log in</a></p>
-  <p>Please register:</p>
-  <form method='post'>
-   <p><label>First Name: <input name="firstname"></label></p>
-   <p><label>Last Name: <input name="lastname"></label></p>
-   <p><label>Username: <input name="username"></label></p>
-   <p><label>Password: <input name="password" type="password"></label></p>
-   <p><label>Repeat: <input name="password2" type="password"></label></p>
-   <p><label>Email: <input name="email"></label></p>
-   <p><button>Register</button></p>
-  </form>
- </body>
-</html>
-<!-- vim: set ts=1 sw=1 expandtab: -->
+<%= erb :header, :locals => {:title => "Register", :gaid => CONF["ga"]["wpid"], :gadomain => CONF["ga"]["domain"]} %>
+<p><a href="/login">Log in</a></p>
+<p>Please register:</p>
+<form method='post'>
+ <p><label>First Name: <input name="firstname"></label></p>
+ <p><label>Last Name: <input name="lastname"></label></p>
+ <p><label>Username: <input name="username"></label></p>
+ <p><label>Password: <input name="password" type="password"></label></p>
+ <p><label>Repeat: <input name="password2" type="password"></label></p>
+ <p><label>Email: <input name="email"></label></p>
+ <p><button>Register</button></p>
+</form>
+<%= erb :footer %>
