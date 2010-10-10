@@ -148,7 +148,7 @@ post '/register' do
 
   # TODO: currently we don't really validate before creation. We probably
   # should.
-  'Registration complete'
+  'Registration complete. <a href="/login">Login</a>.'
 end
 
 # vim: ts=2 sw=2 expandtab:
