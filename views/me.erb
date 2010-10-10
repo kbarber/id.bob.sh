@@ -5,7 +5,11 @@
  </head>
  <body>
   <p><a href="/logout">Log out</a></p>
-  <p>Username: <%= session[:username] %></p>
+  <p>Authenticated Username: <%= session[:username] %></p>
+  <p>Given Name: <%= @crowd_principal[:attributes][:givenName] %></p>
+  <p>Last Name: <%= @crowd_principal[:attributes][:sn] %></p>
+  <p>Email Address: <%= @crowd_principal[:attributes][:mail] %></p>
+  <p>Username: <%= @crowd_principal[:name] %></p>
  </body>
 </html>
 <!-- vim: set ts=1 sw=1 expandtab: -->
