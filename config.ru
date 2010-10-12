@@ -4,4 +4,10 @@ require 'rubygems'
 require 'sinatra'
 require 'id.rb'
 
-run Sinatra::Application
+def app
+  Id
+end
+
+map "/" do
+  run Id
+end

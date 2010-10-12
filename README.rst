@@ -13,7 +13,8 @@ Prerequisites
 * memcache-ruby
 * rack-ruby 1.1.0
 * rubygems-ruby 1.3.7
-* memcached
+* memcached 1.7.8
+* sinatra-captcha 0.1.0.0
 
 Installing
 ----------
